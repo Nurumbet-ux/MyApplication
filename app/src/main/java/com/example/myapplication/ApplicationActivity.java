@@ -31,10 +31,12 @@ public class ApplicationActivity extends AppCompatActivity {
         Intent intent = getIntent();
         if (intent.getExtras() != null) {
             MainModel model = (MainModel) intent.getSerializableExtra(MainActivity.KEYS);
-            etNumber.setText(model.getNumber());
-            etName.setText(model.getName());
-            imageData = Uri.parse(model.getImageVIew());
+            if(model.getNumber()!=null && model.getName()!=null){
+                etNumber.setText(model.getNumber());
+                etName.setText(model.getName());
+            }
             if (model.getImageVIew() != null) {
+                imageData = Uri.parse(model.getImageVIew());
                 Glide.with(this)
                         .load(imageData)
                         .apply(RequestOptions.circleCropTransform())
