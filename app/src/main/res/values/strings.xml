@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyApplication</string>
+    <string name="btn_save">btn_save</string>
+    <string name="edit_number">edit_number</string>
+    <string name="edit_name">edit_name</string>
+    <string name="remove">remove</string>
+    <string name="call">call</string>
+</resources>
